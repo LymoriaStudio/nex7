@@ -30,6 +30,11 @@
     font: 900 1.5rem/1.4 "Manrope", sans-serif;
 }
 
+.font-text-xl {
+    font: 900 2rem "Manrope", sans-serif;
+    
+}
+
 .font-text-l {
     font: 400 1.25rem/1.5 "Montserrat", sans-serif;
 }

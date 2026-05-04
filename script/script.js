@@ -4,4 +4,4 @@ import './clientesc.js';
 import './parceiros.js';
 import './faq.js';
 import './filtercards.js'
-//import './faqhome.js'
+import './faqhome.js'

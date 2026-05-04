@@ -108,10 +108,10 @@
 .carousel-depoimentos {
     --items: 6;
     --dur: 40s;
-    --card-w: 350px;
+    --card-w: 400px;
     --card-h: auto;
     --gap: 24px;
-
+    
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -132,10 +132,11 @@
     width: var(--card-w);
     opacity: 0.6;
     transition: opacity 0.3s ease;
-
+    padding: 24px;
     will-change: transform;
     animation: dep-marquee var(--dur) linear infinite;
     animation-delay: calc(var(--dur) / var(--items) * var(--i) * -1);
+    height: 100%;
 }
 
 .carousel-depoimentos > article:hover {
@@ -144,7 +145,7 @@
 
 /* altura do wrapper do carrossel — precisa ser explícita para o absolute funcionar */
 .carousel-depoimentos {
-    height: 400px; /* aumenta para caber o conteúdo */
+    height: 400px; 
 }
 @keyframes dep-marquee {
     100% {
@@ -172,11 +173,11 @@
    
 
     .carousel-depoimentos {
-        height: 350px;
+        height: 400px;
     }
 
     .carousel-depoimentos {
-        --card-w: 260px;
+        --card-w: 400px;
     }
 }
 @media (max-width: 468px) {

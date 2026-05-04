@@ -22,7 +22,7 @@
 /* NÚMERO */
 .func-number {
     display: block;
-    margin-bottom: 16px;
+    
     color: var(--cor-c2);
     font-family: "Montserrat", sans-serif;
 }
