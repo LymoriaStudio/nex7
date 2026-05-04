@@ -107,7 +107,7 @@
 /* ── CARROSSEL ── */
 .carousel-depoimentos {
     --items: 6;
-    --dur: 40s;
+    --dur: 50s;
     --card-w: 400px;
     --card-h: auto;
     --gap: 24px;
