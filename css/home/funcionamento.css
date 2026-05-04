@@ -1,0 +1,46 @@
+.funcionamento-section h2 {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+/* GRID 2 COLUNAS */
+.funcionamento-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+/* CARD */
+.func-card {
+    border: 1px solid var(--cor-b2);
+    border-radius: 12px;
+    padding: 24px;
+    background: transparent;
+    height: 300px;
+}
+
+/* NÚMERO */
+.func-number {
+    display: block;
+    margin-bottom: 16px;
+    color: var(--cor-c2);
+    font-family: "Montserrat", sans-serif;
+}
+
+/* FOOTER */
+.funcionamento-footer {
+    text-align: center;
+    margin-top: 60px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .funcionamento-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .clientes-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

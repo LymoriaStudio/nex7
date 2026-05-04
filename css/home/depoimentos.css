@@ -1,0 +1,186 @@
+.depoimentos-section {
+    padding-top: 60px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+/* ── SEÇÃO ── */
+.depoimentos-section {
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+  
+}
+
+.depoimentos-section p {
+    margin-top: 22px;
+}
+
+
+.carousel-depoimentos {
+    height: 320px; 
+   
+}
+
+
+/* ── GRID 3 COLUNAS ── */
+.grid-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+     margin-top: 64px;
+}
+
+/* ── CARD BASE (compartilhado grid + carrossel) ── */
+.dep-card,
+.carousel-depoimentos > article {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 350px; /* altura fixa para todos os cards do carrossel */
+    overflow: hidden; /* esconde se o texto ultrapassar */
+}
+
+.dep-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+}
+
+.dep-card-header img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: contain;
+    background: #f4f4f4;
+    border: 1px solid rgba(0,0,0,0.06);
+    padding: 4px;
+    flex-shrink: 0;
+    border: 1px solid var( --cor-c2);
+}
+
+.dep-identity {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+}
+
+.dep-identity strong {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111;
+}
+
+.dep-identity span {
+    font-size: 0.75rem;
+    color: #888;
+}
+
+.dep-identity .dep-empresa {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--cor-c2); /* ajuste para a cor primária do seu projeto */
+}
+
+.dep-stars {
+    font-size: 1.3rem;
+    color: var(--cor-c3);
+    letter-spacing: 2px;
+}
+
+.dep-text {
+    font-size: 14px;
+    line-height: 1.65;
+    color: #444;
+  
+    margin: 0;
+    font-weight: 400;
+}
+
+/* ── CARROSSEL ── */
+.carousel-depoimentos {
+    --items: 6;
+    --dur: 40s;
+    --card-w: 350px;
+    --card-h: auto;
+    --gap: 24px;
+
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-depoimentos[mask] {
+    mask-image: linear-gradient(to right, transparent, black 8% 92%, transparent);
+}
+
+.carousel-depoimentos:hover > article {
+    animation-play-state: paused;
+}
+
+.carousel-depoimentos > article {
+    position: absolute;
+    top: 0;
+    left: calc(100% + var(--gap));
+    width: var(--card-w);
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+
+    will-change: transform;
+    animation: dep-marquee var(--dur) linear infinite;
+    animation-delay: calc(var(--dur) / var(--items) * var(--i) * -1);
+}
+
+.carousel-depoimentos > article:hover {
+    opacity: 1;
+}
+
+/* altura do wrapper do carrossel — precisa ser explícita para o absolute funcionar */
+.carousel-depoimentos {
+    height: 400px; /* aumenta para caber o conteúdo */
+}
+@keyframes dep-marquee {
+    100% {
+        transform: translateX(
+            calc((var(--items) * (var(--card-w) + var(--gap))) * -1)
+        );
+    }
+}
+
+/* ── RESPONSIVO ── */
+@media (max-width: 1024px) {
+    .depoimentos-section {
+        padding: 60px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .depoimentos-section {
+        padding: 48px 20px;
+    }
+    .grid-section {
+        grid-template-columns: repeat(3, 1fr);
+        
+    }
+   
+
+    .carousel-depoimentos {
+        height: 350px;
+    }
+
+    .carousel-depoimentos {
+        --card-w: 260px;
+    }
+}
+@media (max-width: 468px) {
+ .grid-section {
+        grid-template-columns: 1fr;
+    }
+}

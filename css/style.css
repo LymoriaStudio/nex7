@@ -1,0 +1,35 @@
+/*UTILIDADES*/
+
+@import "./utilidades/cores.css";
+@import "./utilidades/tipografia.css";
+
+/*GLOBAL*/
+
+@import "./global/header.css";
+@import "./global/global.css";
+@import "./global/footer.css";
+
+/* CONTATO PG */
+@import "./contato/contatopg.css";
+
+/*HOME*/
+@import "./home/hero.css";
+@import "./home/mult.css";
+@import "./home/clientes.css";
+@import "./home/banner.css";
+@import "./home/combo.css";
+@import "./home/parceiros.css";
+@import"./home/sobrenos.css";
+@import"./home/contatot1.css";
+@import"./home/depoimentos.css";
+@import "./home/faq.css";
+@import "./home/funcionamento.css";
+
+/* COMBO GERAL */
+@import"./combo/combogeral.css";
+@import"./combo/combodesign.css";
+
+
+/* CARTOES GERAL  */
+@import "./cartoesgeral/cartoesgeral.css";
+@import "./cartoesgeral/cartaopagdesign.css";

@@ -1,0 +1,125 @@
+.clientes-section {
+    padding-top: 60px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.clientes-section p {
+    margin-top: 22px;
+}
+
+.decoracao-linha {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    margin-top: 20px;
+}
+
+.linha-horizontal-amarela {
+    height: 2px;
+    width: 100%;
+    background-color: #C49E32;
+}
+
+/* CARROSSEL */
+.clientes-carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    margin-top: 64px;
+}
+
+.clientes-carousel-wrapper::before,
+.clientes-carousel-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.clientes-carousel img {
+    -webkit-user-drag: none;
+    user-drag: none;
+
+}
+
+
+.clientes-carousel {
+    display: flex;
+    gap: 48px;
+    width: max-content;
+    animation: scroll-logos 60s linear infinite;
+        align-items: center; /* isso resolve o risco vertical */
+}
+
+
+
+
+.clientes-carousel img {
+    display: block;
+    width: 160px;
+    height: 64px;
+    background-color: #f6f6f6;
+    padding: 12px;
+    border-radius: 12px;
+    object-fit: contain;
+    object-position: center;
+    flex-shrink: 0;
+    filter: brightness(0.90)  grayscale(100%);                          /* levemente escuro por padrão */
+    transition: filter 0.4s ease, transform 0.3s ease;
+}
+
+.clientes-carousel img:hover {
+    filter: brightness(1.15) grayscale(0%);                          /* clareia no hover */
+    
+}
+
+@keyframes scroll-logos {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Responsivo TABLET */
+@media (max-width: 1024px) {
+    .clientes-section {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 80px;
+    }
+
+    .clientes-carousel {
+        gap: 16px;
+    }
+
+    .clientes-carousel img {
+        width: 120px;
+        height: 64px;
+        padding: 10px;
+    }
+}
+
+/* Responsivo CELULAR */
+@media (max-width: 768px) {
+    .clientes-carousel {
+        gap: 12px;
+    }
+
+    .clientes-carousel img {
+        width: 100px;
+        height: 64px;
+        padding: 8px;
+    }
+
+    .clientes-subtitle {
+        font-size: 14px;
+    }
+
+    .clientes-title {
+        font-size: 20px;
+    }
+}
