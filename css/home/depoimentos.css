@@ -177,7 +177,7 @@
     }
 
     .carousel-depoimentos {
-        --card-w: 400px;
+        --card-w: 350px;
     }
 }
 @media (max-width: 468px) {
