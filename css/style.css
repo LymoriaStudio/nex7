@@ -25,6 +25,7 @@
 @import "./home/faq.css";
 @import "./home/funcionamento.css";
 @import "./home/implantacao.css";
+@import "./home/beneficio.css";
 
 /* COMBO GERAL */
 @import"./combo/combogeral.css";
