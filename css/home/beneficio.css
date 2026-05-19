@@ -123,7 +123,7 @@
     }
  
     /* Bloco Combo (Bloco 02) */
-    .combo-card {
+    .beneficios-section .combo-card {
       border-radius: 16px;
       background-color: var(--cor-b1);
       border: 1px solid var(--cor-c1);
@@ -135,7 +135,7 @@
       overflow: hidden;
     }
  
-    .combo-card::before {
+     .beneficios-section .combo-card::before {
       content: '';
       position: absolute;
       inset: 0;

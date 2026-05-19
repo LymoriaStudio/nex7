@@ -26,6 +26,7 @@
 @import "./home/funcionamento.css";
 @import "./home/implantacao.css";
 @import "./home/beneficio.css";
+@import "./home/cta-whats.css";
 
 /* COMBO GERAL */
 @import"./combo/combogeral.css";
