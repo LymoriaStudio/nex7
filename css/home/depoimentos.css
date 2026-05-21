@@ -43,7 +43,7 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
-    height: 450px; /* altura fixa para todos os cards do carrossel */
+    height: 480px; /* altura fixa para todos os cards do carrossel */
     overflow: hidden; /* esconde se o texto ultrapassar */
 }
 
@@ -117,8 +117,9 @@
     width: 100%;
 }
 
-.carousel-depoimentos[mask] {
-    mask-image: linear-gradient(to right, transparent, black 8% 92%, transparent);
+.carousel-depoimentos {
+    mask-image: none;
+    -webkit-mask-image: none;
 }
 
 .carousel-depoimentos:hover > article {
@@ -128,14 +129,13 @@
 .carousel-depoimentos > article {
     position: absolute;
     top: 0;
-    left: calc(100% + var(--gap));
+    left: calc(var(--i) * (var(--card-w) + var(--gap)));
     width: var(--card-w);
-    opacity: 0.6;
+    opacity: 0.85;
     transition: opacity 0.3s ease;
     padding: 24px;
     will-change: transform;
     animation: dep-marquee var(--dur) linear infinite;
-    animation-delay: calc(var(--dur) / var(--items) * var(--i) * -1);
     height: 100%;
 }
 
@@ -145,16 +145,19 @@
 
 /* altura do wrapper do carrossel — precisa ser explícita para o absolute funcionar */
 .carousel-depoimentos {
-    height: 400px; 
+    height: 480px; 
 }
+
 @keyframes dep-marquee {
-    100% {
+    from {
+        transform: translateX(0);
+    }
+    to {
         transform: translateX(
             calc((var(--items) * (var(--card-w) + var(--gap))) * -1)
         );
     }
 }
-
 /* ── RESPONSIVO ── */
 @media (max-width: 1024px) {
     .depoimentos-section {
@@ -173,7 +176,7 @@
    
 
     .carousel-depoimentos {
-        height: 400px;
+        height: 450px;
     }
 
     .carousel-depoimentos {
