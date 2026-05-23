@@ -5,3 +5,4 @@ import './parceiros.js';
 import './faq.js';
 import './filtercards.js'
 import './faqhome.js'
+import './popup.js'
