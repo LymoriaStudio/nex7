@@ -1,6 +1,6 @@
- .beneficios-section {
+ .beneficios-section-home {
       width: 100%;
-      padding-top: 30px;
+      padding-top: 60px;
       padding-bottom: 100px;
       padding-inline: 80px;
       position: relative;
@@ -123,7 +123,7 @@
     }
  
     /* Bloco Combo (Bloco 02) */
-    .beneficios-section .combo-card {
+    .beneficios-section-home .combo-card {
       border-radius: 16px;
       background-color: var(--cor-b1);
       border: 1px solid var(--cor-c1);
@@ -135,7 +135,7 @@
       overflow: hidden;
     }
  
-     .beneficios-section .combo-card::before {
+     .beneficios-section-home .combo-card::before {
       content: '';
       position: absolute;
       inset: 0;
@@ -175,7 +175,7 @@
  
     /* Responsivo */
     @media (max-width: 1024px) {
-      .beneficios-section {
+      .beneficios-section-home {
         padding: 48px 40px;
       }
  
@@ -185,7 +185,7 @@
     }
  
     @media (max-width: 800px) {
-      .beneficios-section {
+      .beneficios-section-home {
         padding: 40px 24px;
         padding-bottom: 60px;
       }
@@ -201,7 +201,7 @@
     }
  
     @media (max-width: 480px) {
-      .beneficios-section {
+      .beneficios-section-home {
         padding: 32px 16px;
         padding-bottom: 60px;
       }
