@@ -10,8 +10,6 @@
     <link rel="shortcut icon" href="./img/icones/fiveIcon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
     <title>Blog — Nex7 | Vegas Maringá</title>
-
-    
 </head>
 
 <body>
@@ -19,18 +17,10 @@
   <!--NAVBAR-->
     <header class="navbar">
         <div class="container nav-content" id="nav-container">
-            <!-- Logo -->
             <a href="./index.html" class="logo">
                 <img src="./img/logonex7/logopadraobr.svg" alt="Logo Grupo NEX7" />
             </a>
-
-            <!-- Botão Menu Toggle -->
             <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu"></button>
-
-      
-
-
-            <!-- Menu -->
             <nav class="nav-menu" id="nav-menu">
                 <ul class="nav-links">
                     <li><a href="./index.html#sobre" class="cor-b0 font-title-s">SOBRE NÓS</a></li>
@@ -38,12 +28,11 @@
                     <li><a href="./index.html#clientes" class="cor-b0 font-title-s">CLIENTES</a></li>
                     <li><a href="./cartoesgeral.html" class="cor-b0 font-title-s">CARTÕES BENEFÍCIOS</a></li>
                     <li><a href="./combogeral.html" class="cor-b0 font-title-s">COMBO</a></li>
-                     <li><a href="./index.html#depoimentos" class="cor-b0 font-title-s">DEPOIMENTOS</a></li>
+                    <li><a href="./index.html#depoimentos" class="cor-b0 font-title-s">DEPOIMENTOS</a></li>
                     <li><a href="./blog.html" class="cor-b0 font-title-s">BLOG</a></li>
-
                 </ul>
                 <div class="nav-buttons">
-                    <a href="#contato1"  class="btn-white cor-b0 font-title-s">CONTATO</a>
+                    <a href="#contato1" class="btn-white cor-b0 font-title-s">CONTATO</a>
                     <a href="./contato.html" class="btn-gold cor-b0 font-title-s">SOLICITAR PROPOSTA</a>
                 </div>
             </nav>
@@ -60,13 +49,13 @@
     <!-- FILTROS -->
     <div class="blog-filters">
         <div class="blog-filters-inner">
-            <button class="filter-btn active">Todos</button>
-            <button class="filter-btn">Benefícios</button>
-            <button class="filter-btn">Gestão de Pessoas</button>
-            <button class="filter-btn">Cartão Vegas</button>
-            <button class="filter-btn">PAT</button>
-            <button class="filter-btn">Legislação</button>
-            <button class="filter-btn">Dicas de RH</button>
+            <button class="filter-btn active" data-filtro="todos">Todos</button>
+            <button class="filter-btn" data-filtro="beneficios">Benefícios</button>
+            <button class="filter-btn" data-filtro="gestao">Gestão de Pessoas</button>
+            <button class="filter-btn" data-filtro="vegas">Cartão Vegas</button>
+            <button class="filter-btn" data-filtro="pat">PAT</button>
+            <button class="filter-btn" data-filtro="legislacao">Legislação</button>
+            <button class="filter-btn" data-filtro="rh">Dicas de RH</button>
         </div>
     </div>
 
@@ -75,142 +64,35 @@
 
         <!-- COLUNA PRINCIPAL -->
         <main>
+            <!-- Post destaque (renderizado via JS) -->
+            <div id="post-destaque"></div>
 
-            <!-- POST DESTAQUE -->
-            <a href="#" class="post-featured">
-                <div class="post-featured-img">🃏</div>
-                <div class="post-featured-body">
-                    <span class="post-tag">Destaque</span>
-                    <h2>Cartão benefício multibenefício: o que é e por que sua empresa precisa</h2>
-                    <p>Entenda como um único cartão pode unir alimentação, transporte, saúde e muito mais — simplificando a vida do RH e valorizando seu colaborador.</p>
-                    <div class="post-meta">
-                        <span>12 Mai 2025</span>
-                        <span>·</span>
-                        <span>5 min de leitura</span>
-                    </div>
-                    <span class="post-read-link">Ler artigo →</span>
-                </div>
-            </a>
+            <!-- Grade de posts (renderizada via JS) -->
+            <div class="posts-grid" id="posts-grid"></div>
 
-            <!-- GRADE DE POSTS -->
-            <div class="posts-grid">
+            <!-- Mensagem sem resultados -->
+            <p id="blog-empty" style="display:none; text-align:center; color:var(--cor-b3); padding: 48px 0; font: 400 1rem/1.5 'Montserrat', sans-serif;">
+                Nenhum post encontrado nessa categoria ainda.
+            </p>
 
-                <a href="#" class="post-card">
-                    <div class="post-card-img">🍽️</div>
-                    <div class="post-card-body">
-                        <span class="post-tag">PAT</span>
-                        <h3>PAT 2025: o que mudou e como se adequar</h3>
-                        <p>A legislação do Programa de Alimentação do Trabalhador passou por atualizações. Veja o que sua empresa precisa fazer agora.</p>
-                    </div>
-                    <div class="post-card-footer">
-                        <span>08 Mai 2025 · 4 min</span>
-                        <a href="#">Ler →</a>
-                    </div>
-                </a>
-
-                <a href="#" class="post-card">
-                    <div class="post-card-img">👥</div>
-                    <div class="post-card-body">
-                        <span class="post-tag verde">Gestão de Pessoas</span>
-                        <h3>Como benefícios impactam na retenção de talentos</h3>
-                        <p>Dados mostram que pacotes de benefícios bem estruturados reduzem o turnover em até 30%. Entenda como estruturar o seu.</p>
-                    </div>
-                    <div class="post-card-footer">
-                        <span>02 Mai 2025 · 6 min</span>
-                        <a href="#">Ler →</a>
-                    </div>
-                </a>
-
-                <a href="#" class="post-card">
-                    <div class="post-card-img">⚡</div>
-                    <div class="post-card-body">
-                        <span class="post-tag">Cartão Vegas</span>
-                        <h3>Recarga em segundos: como funciona o crédito no Vegas</h3>
-                        <p>Sem filas, sem sistema travado. Veja como carregar os cartões da sua equipe em poucos cliques — ou até pelo WhatsApp.</p>
-                    </div>
-                    <div class="post-card-footer">
-                        <span>25 Abr 2025 · 3 min</span>
-                        <a href="#">Ler →</a>
-                    </div>
-                </a>
-
-                <a href="#" class="post-card">
-                    <div class="post-card-img">📋</div>
-                    <div class="post-card-body">
-                        <span class="post-tag azul">Legislação</span>
-                        <h3>Vale-alimentação vs. vale-refeição: qual a diferença legal?</h3>
-                        <p>Muita empresa confunde os dois. Entenda a diferença, os impactos tributários e como oferecer o benefício certo para cada colaborador.</p>
-                    </div>
-                    <div class="post-card-footer">
-                        <span>18 Abr 2025 · 5 min</span>
-                        <a href="#">Ler →</a>
-                    </div>
-                </a>
-
-                <a href="#" class="post-card">
-                    <div class="post-card-img">🚀</div>
-                    <div class="post-card-body">
-                        <span class="post-tag verde">Dicas de RH</span>
-                        <h3>5 formas de simplificar a gestão de benefícios no dia a dia</h3>
-                        <p>Menos planilha, menos ligação, menos retrabalho. Veja práticas que equipes de RH de diferentes setores já adotaram.</p>
-                    </div>
-                    <div class="post-card-footer">
-                        <span>10 Abr 2025 · 4 min</span>
-                        <a href="#">Ler →</a>
-                    </div>
-                </a>
-
-                <a href="#" class="post-card">
-                    <div class="post-card-img">🏪</div>
-                    <div class="post-card-body">
-                        <span class="post-tag">Cartão Vegas</span>
-                        <h3>Rede credenciada: onde o Cartão Vegas é aceito?</h3>
-                        <p>De supermercados a farmácias, combustível e convênios — conheça a abrangência da rede e como ampliar o acesso para sua equipe.</p>
-                    </div>
-                    <div class="post-card-footer">
-                        <span>03 Abr 2025 · 3 min</span>
-                        <a href="#">Ler →</a>
-                    </div>
-                </a>
-
-            </div>
-
-            <!-- PAGINAÇÃO -->
-            <div class="blog-pagination">
-                <button class="page-btn active">1</button>
-                <button class="page-btn">2</button>
-                <button class="page-btn">3</button>
-                <button class="page-btn">›</button>
-            </div>
-
+            <!-- Paginação (renderizada via JS) -->
+            <div class="blog-pagination" id="blog-pagination"></div>
         </main>
 
         <!-- SIDEBAR -->
         <aside class="blog-sidebar">
 
-            <!-- Newsletter -->
-            <div class="sidebar-block">
-                <h3>Newsletter</h3>
-                <p style="font: 400 .82rem/1.55 'Montserrat', sans-serif; color: var(--cor-b3); margin-bottom: 16px;">
-                    Receba novidades sobre benefícios e gestão direto no seu e-mail. Sem spam.
-                </p>
-                <div class="newsletter-input-wrap">
-                    <input type="email" placeholder="seu@email.com" />
-                    <button type="button">Assinar</button>
-                </div>
-                <p class="newsletter-disclaimer">Ao assinar, você concorda com nossa política de privacidade.</p>
-            </div>
 
             <!-- Categorias -->
             <div class="sidebar-block">
                 <h3>Categorias</h3>
                 <ul class="cat-list">
-                    <li><a href="#">Benefícios <span class="cat-count">12</span></a></li>
-                    <li><a href="#">Gestão de Pessoas <span class="cat-count">8</span></a></li>
-                    <li><a href="#">Cartão Vegas <span class="cat-count">7</span></a></li>
-                    <li><a href="#">PAT <span class="cat-count">5</span></a></li>
-                    <li><a href="#">Legislação <span class="cat-count">4</span></a></li>
-                    <li><a href="#">Dicas de RH <span class="cat-count">9</span></a></li>
+                    <li><a href="#" data-filtro="todos">Benefícios <span class="cat-count">12</span></a></li>
+                    <li><a href="#" data-filtro="gestao">Gestão de Pessoas <span class="cat-count">8</span></a></li>
+                    <li><a href="#" data-filtro="vegas">Cartão Vegas <span class="cat-count">7</span></a></li>
+                    <li><a href="#" data-filtro="pat">PAT <span class="cat-count">5</span></a></li>
+                    <li><a href="#" data-filtro="legislacao">Legislação <span class="cat-count">4</span></a></li>
+                    <li><a href="#" data-filtro="rh">Dicas de RH <span class="cat-count">9</span></a></li>
                 </ul>
             </div>
 
@@ -333,22 +215,243 @@
 
     <script type="module" src="./script/script.js"></script>
     <script>
-        // Filtros
-        document.querySelectorAll('.filter-btn').forEach(btn => {
+    // ═══════════════════════════════════════════════════════════
+    // ARRAY DE POSTS — edite aqui para adicionar/remover posts
+    // ═══════════════════════════════════════════════════════════
+    const posts = [
+        {
+            id: 1,
+            destaque: true,
+            titulo: 'Cartão benefício multibenefício: o que é e por que sua empresa precisa',
+            resumo: 'Entenda como um único cartão pode unir alimentação, transporte, saúde e muito mais — simplificando a vida do RH e valorizando seu colaborador.',
+            categoria: 'vegas',
+            categoriaLabel: 'Cartão Vegas',
+            categoriaClasse: '',
+            imagem: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop&q=80',
+            // cartão de crédito / pagamento
+            data: '12 Mai 2025',
+            leitura: '5 min',
+            url: '#',
+        },
+        {
+            id: 2,
+            destaque: false,
+            titulo: 'PAT 2025: o que mudou e como se adequar',
+            resumo: 'A legislação do Programa de Alimentação do Trabalhador passou por atualizações. Veja o que sua empresa precisa fazer agora.',
+            categoria: 'pat',
+            categoriaLabel: 'PAT',
+            categoriaClasse: '',
+            imagem: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop&q=80',
+            // prato de comida / alimentação
+            data: '08 Mai 2025',
+            leitura: '4 min',
+            url: '#',
+        },
+        {
+            id: 3,
+            destaque: false,
+            titulo: 'Como benefícios impactam na retenção de talentos',
+            resumo: 'Dados mostram que pacotes de benefícios bem estruturados reduzem o turnover em até 30%. Entenda como estruturar o seu.',
+            categoria: 'gestao',
+            categoriaLabel: 'Gestão de Pessoas',
+            categoriaClasse: 'verde',
+            imagem: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=80',
+            // equipe / pessoas no escritório
+            data: '02 Mai 2025',
+            leitura: '6 min',
+            url: '#',
+        },
+        {
+            id: 4,
+            destaque: false,
+            titulo: 'Recarga em segundos: como funciona o crédito no Vegas',
+            resumo: 'Sem filas, sem sistema travado. Veja como carregar os cartões da sua equipe em poucos cliques — ou até pelo WhatsApp.',
+            categoria: 'vegas',
+            categoriaLabel: 'Cartão Vegas',
+            categoriaClasse: '',
+            imagem: 'https://images.unsplash.com/photo-1616077168712-fc6c788db4af?w=800&auto=format&fit=crop&q=80',
+            // smartphone / pagamento digital
+            data: '25 Abr 2025',
+            leitura: '3 min',
+            url: '#',
+        },
+        {
+            id: 5,
+            destaque: false,
+            titulo: 'Vale-alimentação vs. vale-refeição: qual a diferença legal?',
+            resumo: 'Muita empresa confunde os dois. Entenda a diferença, os impactos tributários e como oferecer o benefício certo para cada colaborador.',
+            categoria: 'legislacao',
+            categoriaLabel: 'Legislação',
+            categoriaClasse: 'azul',
+            imagem: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&auto=format&fit=crop&q=80',
+            // documentos / lei / contrato
+            data: '18 Abr 2025',
+            leitura: '5 min',
+            url: '#',
+        },
+        {
+            id: 6,
+            destaque: false,
+            titulo: '5 formas de simplificar a gestão de benefícios no dia a dia',
+            resumo: 'Menos planilha, menos ligação, menos retrabalho. Veja práticas que equipes de RH de diferentes setores já adotaram.',
+            categoria: 'rh',
+            categoriaLabel: 'Dicas de RH',
+            categoriaClasse: 'verde',
+            imagem: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&auto=format&fit=crop&q=80',
+            // notebook / trabalho / produtividade
+            data: '10 Abr 2025',
+            leitura: '4 min',
+            url: '#',
+        },
+        {
+            id: 7,
+            destaque: false,
+            titulo: 'Rede credenciada: onde o Cartão Vegas é aceito?',
+            resumo: 'De supermercados a farmácias, combustível e convênios — conheça a abrangência da rede e como ampliar o acesso para sua equipe.',
+            categoria: 'vegas',
+            categoriaLabel: 'Cartão Vegas',
+            categoriaClasse: '',
+            imagem: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&auto=format&fit=crop&q=80',
+            // loja / comércio / estabelecimento
+            data: '03 Abr 2025',
+            leitura: '3 min',
+            url: '#',
+        },
+    ];
+
+    // ═══════════════════════════════════════════════════════════
+    // CONFIG DE PAGINAÇÃO
+    // ═══════════════════════════════════════════════════════════
+    const POSTS_POR_PAGINA = 6;
+    let paginaAtual = 1;
+    let filtroAtual = 'todos';
+
+    // ═══════════════════════════════════════════════════════════
+    // RENDERIZAÇÃO
+    // ═══════════════════════════════════════════════════════════
+    function tagHTML(post) {
+        return `<span class="post-tag ${post.categoriaClasse}">${post.categoriaLabel}</span>`;
+    }
+
+    function renderDestaque(post) {
+        const el = document.getElementById('post-destaque');
+        if (!post) { el.innerHTML = ''; return; }
+        el.innerHTML = `
+            <a href="${post.url}" class="post-featured">
+                <div class="post-featured-img" style="background-image:url('${post.imagem}'); background-size:cover; background-position:center;"></div>
+                <div class="post-featured-body">
+                    ${tagHTML(post)}
+                    <h2>${post.titulo}</h2>
+                    <p>${post.resumo}</p>
+                    <div class="post-meta">
+                        <span>${post.data}</span>
+                        <span>·</span>
+                        <span>${post.leitura} de leitura</span>
+                    </div>
+                    <span class="post-read-link">Ler artigo →</span>
+                </div>
+            </a>`;
+    }
+
+    function renderCards(lista) {
+        const grid = document.getElementById('posts-grid');
+        const empty = document.getElementById('blog-empty');
+
+        if (lista.length === 0) {
+            grid.innerHTML = '';
+            empty.style.display = 'block';
+            return;
+        }
+        empty.style.display = 'none';
+        grid.innerHTML = lista.map(post => `
+            <a href="${post.url}" class="post-card">
+                <div class="post-card-img" style="background-image:url('${post.imagem}'); background-size:cover; background-position:center;"></div>
+                <div class="post-card-body">
+                    ${tagHTML(post)}
+                    <h3>${post.titulo}</h3>
+                    <p>${post.resumo}</p>
+                </div>
+                <div class="post-card-footer">
+                    <span>${post.data} · ${post.leitura}</span>
+                    <span class="post-read-link" style="font-size:.7rem">Ler →</span>
+                </div>
+            </a>`).join('');
+    }
+
+    function renderPaginacao(totalPaginas) {
+        const pag = document.getElementById('blog-pagination');
+        if (totalPaginas <= 1) { pag.innerHTML = ''; return; }
+
+        let html = '';
+        for (let i = 1; i <= totalPaginas; i++) {
+            html += `<button class="page-btn ${i === paginaAtual ? 'active' : ''}" data-page="${i}">${i}</button>`;
+        }
+        if (paginaAtual < totalPaginas) {
+            html += `<button class="page-btn" data-page="${paginaAtual + 1}">›</button>`;
+        }
+        pag.innerHTML = html;
+
+        pag.querySelectorAll('.page-btn').forEach(btn => {
             btn.addEventListener('click', () => {
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
+                paginaAtual = parseInt(btn.dataset.page);
+                renderTudo();
+                document.querySelector('.blog-body').scrollIntoView({ behavior: 'smooth' });
             });
+        });
+    }
+
+    function renderTudo() {
+        // Filtra posts (excluindo o destaque fixo quando filtro = todos)
+        const postDestaque = posts.find(p => p.destaque);
+        let lista = posts.filter(p => {
+            if (filtroAtual === 'todos') return !p.destaque; // destaque separado
+            return p.categoria === filtroAtual;              // filtra todos incluindo destaque
         });
 
+        // Destaque: mostra fixo em "todos", ou como card normal se filtrado
+        if (filtroAtual === 'todos') {
+            renderDestaque(postDestaque || null);
+        } else {
+            renderDestaque(null); // sem destaque ao filtrar
+        }
+
         // Paginação
-        document.querySelectorAll('.page-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                if (btn.textContent === '›') return;
-                document.querySelectorAll('.page-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-            });
+        const total = Math.ceil(lista.length / POSTS_POR_PAGINA);
+        const inicio = (paginaAtual - 1) * POSTS_POR_PAGINA;
+        const pagina = lista.slice(inicio, inicio + POSTS_POR_PAGINA);
+
+        renderCards(pagina);
+        renderPaginacao(total);
+    }
+
+    // ═══════════════════════════════════════════════════════════
+    // FILTROS
+    // ═══════════════════════════════════════════════════════════
+    function ativarFiltro(filtro) {
+        filtroAtual = filtro;
+        paginaAtual = 1;
+
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.filtro === filtro);
         });
+
+        renderTudo();
+    }
+
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => ativarFiltro(btn.dataset.filtro));
+    });
+
+    document.querySelectorAll('.cat-list a[data-filtro]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            ativarFiltro(link.dataset.filtro);
+            document.querySelector('.blog-body').scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    // ── INICIALIZA ────────────────────────────────────────────
+    renderTudo();
     </script>
 
 </body>
