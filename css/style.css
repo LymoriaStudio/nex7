@@ -36,3 +36,5 @@
 /* CARTOES GERAL  */
 @import "./cartoesgeral/cartoesgeral.css";
 @import "./cartoesgeral/cartaopagdesign.css";
+
+@import "./blog.css"
